@@ -1,0 +1,477 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import logo from '../assets/logo-3a.png';
+
+// TODO: Beispiel-Telefonnummer - vor dem Livegang durch die echte ersetzen
+const telefon = '+386 41 234 567';
+const telefonPrikaz = '041 234 567';
+const telefonHref = 'tel:+38641234567';
+const email = 'info@3a-fasaderstvo.si';
+const kraj = 'Škofja Loka';
+
+const storitve = [
+  {
+    naslov: 'Izdelava novih fasad',
+    opis: 'Celovita izvedba fasade na novogradnji, od priprave podlage do zaključnega sloja.',
+  },
+  {
+    naslov: 'Toplotna in zvočna izolacija',
+    opis: 'Nižji stroški ogrevanja, prijetnejše bivanje in manj hrupa iz okolice.',
+  },
+  {
+    naslov: 'Obnova in sanacija starih fasad',
+    opis: 'Odprava razpok in vlage ter nov, trajen videz starejših objektov.',
+  },
+  {
+    naslov: 'Napušči in dekorativni elementi',
+    opis: 'Napušči, obrobe in okrasni elementi, ki dajo fasadi dokončan videz.',
+  },
+  {
+    naslov: 'Barvanje fasad',
+    opis: 'Osvežitev barve in dodatna zaščita fasade pred vremenskimi vplivi.',
+  },
+  {
+    naslov: 'Strokovno svetovanje in izmere',
+    opis: 'Svetovanje pri izbiri sistema in debeline izolacije ter natančne izmere na objektu.',
+  },
+];
+
+const razlogi = [
+  {
+    naslov: '10 let dokazanih izkušenj',
+    opis: 'Izognete se začetniškim napakam. Za seboj imamo desetletje prakse na najrazličnejših objektih.',
+  },
+  {
+    naslov: 'Držimo dano besedo',
+    opis: 'Spoštujemo dogovorjene roke začetka in zaključka del.',
+  },
+  {
+    naslov: 'Uigrana ekipa mojstrov',
+    opis: 'Ekipa preverjenih mojstrov, ki dela usklajeno in zna svoje delo.',
+  },
+  {
+    naslov: 'Čistoča na gradbišču',
+    opis: 'Spoštujemo vašo lastnino. Okolico hiše pred delom skrbno zaščitimo, po končanem delu pa za seboj pospravimo.',
+  },
+];
+
+const naslovStrani = `Fasaderstvo ${kraj} | 3A FASADERSTVO d. o. o.`;
+const opisStrani =
+  'Izdelava novih fasad, toplotna izolacija ter obnova in sanacija starih fasad v Škofji Loki in okolici. Več kot 10 let izkušenj. Brezplačen ogled objekta in priprava ponudbe.';
+
+// TODO: naslov podjetja dopolniti, ko ga dobimo od lastnika
+const shema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: '3A FASADERSTVO d. o. o.',
+  slogan: 'Kakovost v vsakem sloju.',
+  description: opisStrani,
+  telephone: telefon,
+  email: email,
+  url: 'https://3a-fasaderstvo.si',
+  areaServed: 'Škofja Loka in okolica',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Škofja Loka',
+    addressCountry: 'SI',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '17:00',
+    },
+  ],
+};
+---
+
+<Layout naslov={naslovStrani} opis={opisStrani}>
+  <script type="application/ld+json" set:html={JSON.stringify(shema)} />
+
+  <!-- Glava -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-grafit-800/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="#" class="flex items-center gap-3">
+        <Image
+          src={logo}
+          alt="3A FASADERSTVO - kakovost v vsakem sloju"
+          widths={[240, 480]}
+          sizes="170px"
+          class="h-11 w-auto rounded sm:h-14"
+          loading="eager"
+        />
+        <span class="sr-only">3A FASADERSTVO</span>
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-medium text-grafit-100 md:flex">
+        <a href="#storitve" class="transition hover:text-zlato-400">Storitve</a>
+        <a href="#o-nas" class="transition hover:text-zlato-400">O nas</a>
+        <a href="#zakaj-mi" class="transition hover:text-zlato-400">Zakaj mi</a>
+        <a href="#kontakt" class="transition hover:text-zlato-400">Kontakt</a>
+      </nav>
+
+      <a
+        href={telefonHref}
+        class="hidden rounded-md bg-zlato-500 px-4 py-2 text-sm font-semibold text-grafit-900 transition hover:bg-zlato-400 sm:inline-block"
+      >
+        {telefonPrikaz}
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Uvod -->
+    <section class="relative overflow-hidden bg-grafit-800">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(201,162,74,0.18),transparent_60%)]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div>
+          <p class="mb-4 inline-flex items-center rounded-full border border-zlato-500/40 px-3 py-1 text-xs font-semibold tracking-wide text-zlato-400 uppercase">
+            Več kot 10 let izkušenj na terenu
+          </p>
+
+          <h1 class="text-4xl leading-tight font-bold text-white sm:text-5xl">
+            Fasade v Škofji Loki
+            <span class="block text-zlato-500">in okolici</span>
+          </h1>
+
+          <p class="mt-5 text-lg text-grafit-100">
+            Uigrana ekipa preverjenih mojstrov vašemu domu prinaša vrhunsko toplotno
+            izolacijo, dolgotrajno zaščito in brezhiben videz.
+          </p>
+
+          <p class="mt-3 text-base text-zlato-400 italic">Kakovost v vsakem sloju.</p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={telefonHref}
+              class="hidden items-center justify-center rounded-md bg-zlato-500 px-6 py-3.5 sm:inline-flex text-base font-semibold text-grafit-900 transition hover:bg-zlato-400"
+            >
+              Pokličite {telefonPrikaz}
+            </a>
+            <a
+              href="#kontakt"
+              class="inline-flex items-center justify-center rounded-md border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:border-zlato-500 hover:text-zlato-400"
+            >
+              Brezplačen ogled objekta
+            </a>
+          </div>
+
+          <p class="mt-5 text-sm text-grafit-100/70">
+            Brezplačen ogled objekta in priprava ponudbe &middot; ponedeljek&ndash;petek,
+            7.00&ndash;17.00
+          </p>
+        </div>
+
+        <div class="hidden lg:block">
+          <Image
+            src={logo}
+            alt="Logotip 3A FASADERSTVO - kakovost v vsakem sloju"
+            widths={[560, 1020]}
+            sizes="520px"
+            class="w-full rounded-xl shadow-2xl ring-1 ring-white/10"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Zaupanje -->
+    <section class="border-b border-grafit-100 bg-grafit-50">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-px px-4 py-8 text-center sm:grid-cols-4">
+        <div class="px-2">
+          <p class="text-2xl font-bold text-grafit-800">10+</p>
+          <p class="mt-1 text-sm text-grafit-700">let izkušenj</p>
+        </div>
+        <div class="px-2">
+          <p class="text-2xl font-bold text-grafit-800">Družinska</p>
+          <p class="mt-1 text-sm text-grafit-700">obrt</p>
+        </div>
+        <div class="px-2">
+          <p class="text-2xl font-bold text-grafit-800">Dogovorjeni</p>
+          <p class="mt-1 text-sm text-grafit-700">roki</p>
+        </div>
+        <div class="px-2">
+          <p class="text-2xl font-bold text-grafit-800">Čisto</p>
+          <p class="mt-1 text-sm text-grafit-700">gradbišče</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Storitve -->
+    <section id="storitve" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+        Naše storitve v Škofji Loki in okolici
+      </h2>
+      <p class="mt-3 max-w-2xl text-grafit-700">
+        Od izdelave nove fasade do obnove starejšega objekta &ndash; vse iz ene roke.
+      </p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          storitve.map((s) => (
+            <article class="group rounded-lg border border-grafit-100 bg-white p-6 transition hover:border-zlato-500 hover:shadow-lg">
+              <div class="mb-4 h-1 w-10 rounded bg-zlato-500 transition-all group-hover:w-16" />
+              <h3 class="text-lg font-semibold text-grafit-800">{s.naslov}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-grafit-700">{s.opis}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- O nas -->
+    <section id="o-nas" class="bg-grafit-800 py-16 sm:py-20">
+      <div class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Zakaj ime 3A?</h2>
+          <p class="mt-5 text-lg text-grafit-100">
+            Tri črke A v imenu našega podjetja predstavljajo začetnice naših treh sinov.
+            Za nas to ni le ime, ampak osebna zaveza.
+          </p>
+          <p class="mt-4 text-grafit-100/80">
+            Tako kot svoje družine se z vso predanostjo, poštenostjo in trdnimi temelji
+            lotimo tudi zaščite vašega doma.
+          </p>
+          <p class="mt-4 text-grafit-100/80">
+            Čeprav je ime 3A fasaderstvo na trgu novo, naše znanje in izkušnje segajo
+            več kot 10 let v preteklost. Dolgoletno delo, nešteti uspešno zaključeni
+            projekti in številne pohvale zadovoljnih strank so nas pripeljali do
+            odločitve, da stopimo na samostojno pot.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-white/10 bg-grafit-900 p-8">
+          <div
+            class="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-white/15 text-center text-sm text-grafit-100/50"
+          >
+            Mesto za fotografijo ekipe
+          </div>
+          <p class="mt-6 text-center text-sm text-grafit-100/70">
+            10 let izkušenj na terenu, zdaj združenih v družinsko obrt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zakaj mi -->
+    <section id="zakaj-mi" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+        Zakaj izbrati 3A fasaderstvo?
+      </h2>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-2">
+        {
+          razlogi.map((r, i) => (
+            <div class="flex gap-5">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-zlato-500 font-bold text-grafit-900">
+                {i + 1}
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-grafit-800">{r.naslov}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-grafit-700">{r.opis}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Projekti (TODO: prave fotografije) -->
+    <section class="bg-grafit-50 py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Naši projekti</h2>
+        <p class="mt-3 max-w-2xl text-grafit-700">
+          Pogled na nekaj objektov, ki smo jih izvedli.
+        </p>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            [1, 2, 3].map(() => (
+              <div class="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-grafit-100 bg-white text-center text-sm text-grafit-700/60">
+                Mesto za fotografijo projekta
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+            Brezplačen ogled in ponudba
+          </h2>
+          <p class="mt-4 text-grafit-700">
+            Pokličite nas ali nam pišite. Objekt si brezplačno ogledamo in vam
+            pripravimo ponudbo.
+          </p>
+
+          <dl class="mt-8 space-y-5">
+            <div>
+              <dt class="text-sm font-semibold tracking-wide text-grafit-700 uppercase">
+                Telefon
+              </dt>
+              <dd class="mt-1">
+                <a href={telefonHref} class="text-xl font-bold text-grafit-800 hover:text-zlato-600">
+                  {telefon}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold tracking-wide text-grafit-700 uppercase">
+                E-pošta
+              </dt>
+              <dd class="mt-1">
+                <a href={`mailto:${email}`} class="text-lg text-grafit-800 hover:text-zlato-600">
+                  {email}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold tracking-wide text-grafit-700 uppercase">
+                Delovni čas
+              </dt>
+              <dd class="mt-1 text-grafit-800">ponedeljek&ndash;petek, 7.00&ndash;17.00</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold tracking-wide text-grafit-700 uppercase">
+                Območje delovanja
+              </dt>
+              <dd class="mt-1 text-grafit-800">Škofja Loka in okolica</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form
+          name="povprasevanje"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="rounded-xl border border-grafit-100 bg-grafit-50 p-6 sm:p-8"
+        >
+          <input type="hidden" name="form-name" value="povprasevanje" />
+          <p class="hidden">
+            <label>Ne izpolnjujte tega polja: <input name="bot-field" /></label>
+          </p>
+
+          <div class="space-y-4">
+            <div>
+              <label for="ime" class="block text-sm font-medium text-grafit-800">
+                Ime in priimek
+              </label>
+              <input
+                type="text"
+                id="ime"
+                name="ime"
+                required
+                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+              />
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="telefon" class="block text-sm font-medium text-grafit-800">
+                  Telefon
+                </label>
+                <input
+                  type="tel"
+                  id="telefon"
+                  name="telefon"
+                  required
+                  class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                />
+              </div>
+              <div>
+                <label for="eposta" class="block text-sm font-medium text-grafit-800">
+                  E-pošta
+                </label>
+                <input
+                  type="email"
+                  id="eposta"
+                  name="eposta"
+                  class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="kraj" class="block text-sm font-medium text-grafit-800">
+                Kraj objekta
+              </label>
+              <input
+                type="text"
+                id="kraj"
+                name="kraj"
+                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+              />
+            </div>
+
+            <div>
+              <label for="sporocilo" class="block text-sm font-medium text-grafit-800">
+                Sporočilo
+              </label>
+              <textarea
+                id="sporocilo"
+                name="sporocilo"
+                rows="4"
+                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-6 w-full rounded-md bg-zlato-500 px-6 py-3.5 font-semibold text-grafit-900 transition hover:bg-zlato-400"
+          >
+            Pošljite povpraševanje
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Noga -->
+  <footer class="bg-grafit-900 py-10 text-grafit-100/70">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="font-semibold text-white">3A FASADERSTVO d. o. o.</p>
+          <p class="mt-1 text-sm text-zlato-500">Kakovost v vsakem sloju.</p>
+        </div>
+        <div class="text-sm">
+          <p>
+            <a href={telefonHref} class="hover:text-zlato-400">{telefon}</a>
+          </p>
+          <p class="mt-1">
+            <a href={`mailto:${email}`} class="hover:text-zlato-400">{email}</a>
+          </p>
+          <p class="mt-1">ponedeljek&ndash;petek, 7.00&ndash;17.00</p>
+        </div>
+      </div>
+
+      <p class="mt-8 border-t border-white/10 pt-6 text-xs">
+        &copy; {new Date().getFullYear()} 3A FASADERSTVO d. o. o.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Trajna gumba za klic na mobilnih napravah -->
+  <div class="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-grafit-800 p-3 sm:hidden">
+    <a
+      href={telefonHref}
+      class="flex w-full items-center justify-center gap-2 rounded-md bg-zlato-500 px-5 py-3.5 font-semibold text-grafit-900"
+    >
+      Pokličite {telefonPrikaz}
+    </a>
+  </div>
+  <div class="h-20 sm:hidden" aria-hidden="true"></div>
+</Layout>
