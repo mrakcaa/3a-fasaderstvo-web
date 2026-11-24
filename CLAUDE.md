@@ -5,7 +5,7 @@ Einfache, schnelle Website, die Vertrauen schafft und Anfragen bringt
 (Anruf, WhatsApp, Kontaktformular). Wichtigste Handlung: kostenlose
 Besichtigung und Angebot anfragen („brezplačen ogled objekta in
 priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
-[Stadt/Region].
+Škofja Loka und Umgebung.
 
 ## Sprache und Land
 - Die Website ist für den slowenischen Markt. Hauptsprache ist Slowenisch.
@@ -23,12 +23,12 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
 ## Firmendaten
 - Name: 3A FASADERSTVO d. o. o.
 - Slogan: „Kakovost v vsakem sloju.“
-- Inhaber: [Name]
-- Adresse: [Adresse]
-- Telefon/WhatsApp: [Nummer]
-- E-Mail: [E-Mail]
+- Inhaber: Fahrudin Coralic
+- Adresse: TODO (vom Inhaber nachliefern)
+- Telefon/WhatsApp: +386 41 234 567 (BEISPIEL - TODO: echte Nummer)
+- E-Mail: info@3a-fasaderstvo.si
 - Arbeitszeiten: ponedeljek–petek, 7.00–17.00
-- Einsatzgebiet: [z. B. Celje und Umgebung]
+- Einsatzgebiet: Škofja Loka und Umgebung (TODO: genaue Reichweite)
 - Alle Texte, Leistungen und Argumente: siehe inhalt/podatki-podjetja.md
 
 ## Technik
@@ -50,7 +50,7 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
 ## SEO
 - Eine eigene Seite pro Leistung (siehe Liste in podatki-podjetja.md).
 - Ort/Region in Seitentitel, Überschriften und Texten nennen.
-- Wichtige Suchbegriffe: fasade [Stadt], fasaderstvo [Stadt],
+- Wichtige Suchbegriffe: fasade Škofja Loka, fasaderstvo Škofja Loka,
   izdelava fasad, toplotna izolacija fasade, sanacija fasade,
   barvanje fasade
 - Pro Seite eigener Meta-Titel und eigene Meta-Beschreibung.
@@ -62,8 +62,9 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
   (ca. #C9A24A), dazu viel Weiß bzw. helles Grau für Lesbarkeit.
   Gold sparsam für Akzente und Buttons einsetzen.
 - Wirkung: hochwertig, seriös, handwerklich. Viel Platz für Projektfotos.
-- Logo: inhalt/logo.* (falls nur als Foto vorhanden, als TODO melden,
-  dass eine saubere Version mit transparentem Hintergrund fehlt).
+- Logo: inhalt/logo-foto.png (Mockup-Render) und inhalt/logo-karta.png
+  (zugeschnitten). TODO: saubere Vektor-/PNG-Version mit transparentem
+  Hintergrund fehlt noch.
 - Mobil zuerst: Die meisten Besucher kommen vom Handy.
 - Telefonnummer auf dem Handy immer gut sichtbar, mit Click-to-call.
 

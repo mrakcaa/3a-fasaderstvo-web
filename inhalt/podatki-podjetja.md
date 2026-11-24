@@ -41,9 +41,11 @@ predanostjo, poštenostjo in trdnimi temelji zaščitimo tudi vaš dom.
 
 ## Kontakt
 
+Območje delovanja: Škofja Loka in okolica (TODO: potrditi doseg)
+
 Pokličite nas ali nam pišite za brezplačen ogled objekta in pripravo
 ponudbe.
 
-- Telefon: [Nummer]
-- E-pošta: [E-Mail]
+- Telefon: +386 41 234 567 (PRIMER - TODO: prava številka)
+- E-pošta: info@3a-fasaderstvo.si
 - Delovni čas: ponedeljek–petek, 7.00–17.00
