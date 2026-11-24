@@ -5,7 +5,7 @@ Einfache, schnelle Website, die Vertrauen schafft und Anfragen bringt
 (Anruf, WhatsApp, Kontaktformular). Wichtigste Handlung: kostenlose
 Besichtigung und Angebot anfragen („brezplačen ogled objekta in
 priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
-Škofja Loka und Umgebung.
+ganz Slowenien.
 
 ## Sprache und Land
 - Die Website ist für den slowenischen Markt. Hauptsprache ist Slowenisch.
@@ -25,10 +25,10 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
 - Slogan: „Kakovost v vsakem sloju.“
 - Inhaber: Fahrudin Coralic
 - Adresse: TODO (vom Inhaber nachliefern)
-- Telefon/WhatsApp: +386 41 234 567 (BEISPIEL - TODO: echte Nummer)
+- Telefon/WhatsApp: +386 70 207 771
 - E-Mail: info@3a-fasaderstvo.si
 - Arbeitszeiten: ponedeljek–petek, 7.00–17.00
-- Einsatzgebiet: Škofja Loka und Umgebung (TODO: genaue Reichweite)
+- Einsatzgebiet: ganz Slowenien (Sitz/Ausgangspunkt: Škofja Loka)
 - Alle Texte, Leistungen und Argumente: siehe inhalt/podatki-podjetja.md
 
 ## Technik
@@ -49,10 +49,12 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
 
 ## SEO
 - Eine eigene Seite pro Leistung (siehe Liste in podatki-podjetja.md).
-- Ort/Region in Seitentitel, Überschriften und Texten nennen.
-- Wichtige Suchbegriffe: fasade Škofja Loka, fasaderstvo Škofja Loka,
+- Landesweit ausrichten („po vsej Sloveniji“), Škofja Loka als Sitz nennen.
+  TODO: später eigene Regionsseiten prüfen, landesweite Begriffe sind
+  deutlich schwerer zu ranken als lokale.
+- Wichtige Suchbegriffe: fasaderstvo Slovenija, fasade Slovenija,
   izdelava fasad, toplotna izolacija fasade, sanacija fasade,
-  barvanje fasade
+  barvanje fasade, fasade Škofja Loka (Sitz)
 - Pro Seite eigener Meta-Titel und eigene Meta-Beschreibung.
 - LocalBusiness-Schema (JSON-LD) mit Firmendaten und Arbeitszeiten,
   Sitemap, hreflang falls zweite Sprache.

@@ -3,12 +3,51 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import logo from '../assets/logo-3a.png';
 
-// TODO: Beispiel-Telefonnummer - vor dem Livegang durch die echte ersetzen
-const telefon = '+386 41 234 567';
-const telefonPrikaz = '041 234 567';
-const telefonHref = 'tel:+38641234567';
+const telefon = '+386 70 207 771';
+const telefonPrikaz = '070 207 771';
+const telefonHref = 'tel:+38670207771';
 const email = 'info@3a-fasaderstvo.si';
-const kraj = 'Škofja Loka';
+const sedez = 'Škofja Loka';
+
+// Ablauf der Zusammenarbeit - alle Punkte stammen aus den Angaben des Inhabers
+const koraki = [
+  {
+    naslov: 'Pokličete ali pošljete povpraševanje',
+    opis: 'Oglasite se po telefonu ali izpolnite obrazec. Odgovorimo v najkrajšem možnem času.',
+  },
+  {
+    naslov: 'Brezplačen ogled objekta',
+    opis: 'Pridemo na teren, pregledamo stanje objekta in opravimo natančne izmere.',
+  },
+  {
+    naslov: 'Ponudba brez obveznosti',
+    opis: 'Pripravimo jasno ponudbo z opisom del in materialov. Odločitev je nato vaša.',
+  },
+  {
+    naslov: 'Izvedba in predaja',
+    opis: 'Dela izvedemo v dogovorjenem roku, po končanem delu pa za seboj pospravimo.',
+  },
+];
+
+// Antworten bewusst nur aus bekannten Angaben - keine technischen Behauptungen
+const vprasanja = [
+  {
+    v: 'Kje vse izvajate dela?',
+    o: 'Delujemo po vsej Sloveniji. Sedež imamo v Škofji Loki, na teren pa prihajamo po celotni državi.',
+  },
+  {
+    v: 'Koliko stane fasada?',
+    o: 'Cena je odvisna od velikosti objekta, izbranega fasadnega sistema in stanja podlage. Zato objekt najprej brezplačno pregledamo in vam šele nato pripravimo ponudbo.',
+  },
+  {
+    v: 'Kako hitro lahko začnete?',
+    o: 'Termin se dogovorimo ob ogledu objekta. Dogovorjene roke začetka in zaključka del dosledno spoštujemo.',
+  },
+  {
+    v: 'Kaj pa čistoča med deli in po njih?',
+    o: 'Okolico hiše pred začetkom del skrbno zaščitimo, po zaključku pa gradbišče pospravimo za seboj.',
+  },
+];
 
 const storitve = [
   {
@@ -56,9 +95,9 @@ const razlogi = [
   },
 ];
 
-const naslovStrani = `Fasaderstvo ${kraj} | 3A FASADERSTVO d. o. o.`;
+const naslovStrani = 'Fasaderstvo po vsej Sloveniji | 3A FASADERSTVO d. o. o.';
 const opisStrani =
-  'Izdelava novih fasad, toplotna izolacija ter obnova in sanacija starih fasad v Škofji Loki in okolici. Več kot 10 let izkušenj. Brezplačen ogled objekta in priprava ponudbe.';
+  'Izdelava novih fasad, toplotna izolacija ter obnova in sanacija starih fasad po vsej Sloveniji. Več kot 10 let izkušenj. Brezplačen ogled objekta in priprava ponudbe.';
 
 // TODO: naslov podjetja dopolniti, ko ga dobimo od lastnika
 const shema = {
@@ -70,10 +109,10 @@ const shema = {
   telephone: telefon,
   email: email,
   url: 'https://3a-fasaderstvo.si',
-  areaServed: 'Škofja Loka in okolica',
+  areaServed: { '@type': 'Country', name: 'Slovenija' },
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Škofja Loka',
+    addressLocality: sedez,
     addressCountry: 'SI',
   },
   openingHoursSpecification: [
@@ -107,6 +146,7 @@ const shema = {
 
       <nav class="hidden items-center gap-7 text-sm font-medium text-grafit-100 md:flex">
         <a href="#storitve" class="transition hover:text-zlato-400">Storitve</a>
+        <a href="#potek" class="transition hover:text-zlato-400">Potek dela</a>
         <a href="#o-nas" class="transition hover:text-zlato-400">O nas</a>
         <a href="#zakaj-mi" class="transition hover:text-zlato-400">Zakaj mi</a>
         <a href="#kontakt" class="transition hover:text-zlato-400">Kontakt</a>
@@ -137,8 +177,8 @@ const shema = {
           </p>
 
           <h1 class="text-4xl leading-tight font-bold text-white sm:text-5xl">
-            Fasade v Škofji Loki
-            <span class="block text-zlato-500">in okolici</span>
+            Fasade in toplotna izolacija
+            <span class="block text-zlato-500">po vsej Sloveniji</span>
           </h1>
 
           <p class="mt-5 text-lg text-grafit-100">
@@ -164,8 +204,8 @@ const shema = {
           </div>
 
           <p class="mt-5 text-sm text-grafit-100/70">
-            Brezplačen ogled objekta in priprava ponudbe &middot; ponedeljek&ndash;petek,
-            7.00&ndash;17.00
+            Delujemo po vsej Sloveniji &middot; brezplačen ogled objekta in priprava
+            ponudbe &middot; ponedeljek&ndash;petek, 7.00&ndash;17.00
           </p>
         </div>
 
@@ -190,8 +230,8 @@ const shema = {
           <p class="mt-1 text-sm text-grafit-700">let izkušenj</p>
         </div>
         <div class="px-2">
-          <p class="text-2xl font-bold text-grafit-800">Družinska</p>
-          <p class="mt-1 text-sm text-grafit-700">obrt</p>
+          <p class="text-2xl font-bold text-grafit-800">Vsa</p>
+          <p class="mt-1 text-sm text-grafit-700">Slovenija</p>
         </div>
         <div class="px-2">
           <p class="text-2xl font-bold text-grafit-800">Dogovorjeni</p>
@@ -207,10 +247,11 @@ const shema = {
     <!-- Storitve -->
     <section id="storitve" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
       <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
-        Naše storitve v Škofji Loki in okolici
+        Naše storitve
       </h2>
       <p class="mt-3 max-w-2xl text-grafit-700">
-        Od izdelave nove fasade do obnove starejšega objekta &ndash; vse iz ene roke.
+        Od izdelave nove fasade do obnove starejšega objekta &ndash; vse iz ene roke,
+        po vsej Sloveniji.
       </p>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -223,6 +264,37 @@ const shema = {
             </article>
           ))
         }
+      </div>
+    </section>
+
+    <!-- Potek dela -->
+    <section id="potek" class="bg-grafit-50 py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Kako poteka sodelovanje</h2>
+        <p class="mt-3 max-w-2xl text-grafit-700">
+          Štirje koraki od prvega klica do končane fasade.
+        </p>
+
+        <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            koraki.map((k, i) => (
+              <li class="relative rounded-lg border border-grafit-100 bg-white p-6">
+                <span class="text-4xl font-bold text-zlato-500">{i + 1}</span>
+                <h3 class="mt-2 text-lg font-semibold text-grafit-800">{k.naslov}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-grafit-700">{k.opis}</p>
+              </li>
+            ))
+          }
+        </ol>
+
+        <div class="mt-10">
+          <a
+            href="#kontakt"
+            class="inline-flex items-center justify-center rounded-md bg-zlato-500 px-6 py-3.5 font-semibold text-grafit-900 transition hover:bg-zlato-400"
+          >
+            Pošljite povpraševanje
+          </a>
+        </div>
       </div>
     </section>
 
@@ -303,9 +375,30 @@ const shema = {
       </div>
     </section>
 
+    <!-- Pogosta vprasanja -->
+    <section id="nasveti" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Pogosta vprašanja</h2>
+
+      <div class="mt-10 max-w-3xl divide-y divide-grafit-100 border-y border-grafit-100">
+        {
+          vprasanja.map((q) => (
+            <details class="group py-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-grafit-800">
+                {q.v}
+                <span class="shrink-0 text-2xl leading-none text-zlato-500 transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p class="mt-3 text-grafit-700">{q.o}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
     <!-- Kontakt -->
-    <section id="kontakt" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <div class="grid gap-12 lg:grid-cols-2">
+    <section id="kontakt" class="bg-grafit-50 py-16 sm:py-20">
+      <div class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2">
         <div>
           <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
             Brezplačen ogled in ponudba
@@ -346,7 +439,9 @@ const shema = {
               <dt class="text-sm font-semibold tracking-wide text-grafit-700 uppercase">
                 Območje delovanja
               </dt>
-              <dd class="mt-1 text-grafit-800">Škofja Loka in okolica</dd>
+              <dd class="mt-1 text-grafit-800">
+                Po vsej Sloveniji &middot; sedež v Škofji Loki
+              </dd>
             </div>
           </dl>
         </div>
@@ -356,7 +451,7 @@ const shema = {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          class="rounded-xl border border-grafit-100 bg-grafit-50 p-6 sm:p-8"
+          class="rounded-xl border border-grafit-100 bg-white p-6 sm:p-8"
         >
           <input type="hidden" name="form-name" value="povprasevanje" />
           <p class="hidden">
