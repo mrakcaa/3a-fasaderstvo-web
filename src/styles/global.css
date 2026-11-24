@@ -2,26 +2,46 @@
 
 @theme {
   /* Farben aus dem Logo */
-  --color-grafit-900: #212429;
+  --color-grafit-900: #1c1f23;
   --color-grafit-800: #2b2e33;
   --color-grafit-700: #3a3e45;
-  --color-grafit-100: #eceef0;
-  --color-grafit-50: #f6f7f8;
+  --color-grafit-600: #585d66;
+  --color-grafit-100: #dcdfe3;
+  --color-grafit-50: #f1f2f4;
 
   --color-zlato-600: #ad8734;
   --color-zlato-500: #c9a24a;
   --color-zlato-400: #dcbb6e;
 
-  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue",
-    Arial, sans-serif;
+  /* Schrift: schmal und kraeftig fuer Ueberschriften, ruhig fuer Fliesstext */
+  --font-sans: "Barlow", system-ui, -apple-system, Arial, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", system-ui, Arial, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Platz fuer die feste Anruf-Leiste auf dem Handy */
   scroll-padding-top: 5rem;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+/* Feine Schraffur fuer dunkle Flaechen - gibt Materialanmutung statt Farbflaeche */
+.tekstura {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgb(255 255 255 / 0.022) 0 2px,
+    transparent 2px 9px
+  );
+}
+
+/* Goldene Kante als Abschnittsmarke */
+.crta::before {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  margin-bottom: 1.25rem;
+  background: var(--color-zlato-500);
 }

@@ -130,7 +130,7 @@ const shema = {
   <script type="application/ld+json" set:html={JSON.stringify(shema)} />
 
   <!-- Glava -->
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-grafit-800/95 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-grafit-800/95 backdrop-blur-sm">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
       <a href="#" class="flex items-center gap-3">
         <Image
@@ -138,23 +138,23 @@ const shema = {
           alt="3A FASADERSTVO - kakovost v vsakem sloju"
           widths={[240, 480]}
           sizes="170px"
-          class="h-11 w-auto rounded sm:h-14"
+          class="h-11 w-auto sm:h-14"
           loading="eager"
         />
         <span class="sr-only">3A FASADERSTVO</span>
       </a>
 
       <nav class="hidden items-center gap-7 text-sm font-medium text-grafit-100 md:flex">
-        <a href="#storitve" class="transition hover:text-zlato-400">Storitve</a>
-        <a href="#potek" class="transition hover:text-zlato-400">Potek dela</a>
-        <a href="#o-nas" class="transition hover:text-zlato-400">O nas</a>
-        <a href="#zakaj-mi" class="transition hover:text-zlato-400">Zakaj mi</a>
-        <a href="#kontakt" class="transition hover:text-zlato-400">Kontakt</a>
+        <a href="#storitve" class="font-display text-base font-semibold tracking-[0.1em] uppercase transition hover:text-zlato-400">Storitve</a>
+        <a href="#potek" class="font-display text-base font-semibold tracking-[0.1em] uppercase transition hover:text-zlato-400">Potek dela</a>
+        <a href="#o-nas" class="font-display text-base font-semibold tracking-[0.1em] uppercase transition hover:text-zlato-400">O nas</a>
+        <a href="#zakaj-mi" class="font-display text-base font-semibold tracking-[0.1em] uppercase transition hover:text-zlato-400">Zakaj mi</a>
+        <a href="#kontakt" class="font-display text-base font-semibold tracking-[0.1em] uppercase transition hover:text-zlato-400">Kontakt</a>
       </nav>
 
       <a
         href={telefonHref}
-        class="hidden rounded-md bg-zlato-500 px-4 py-2 text-sm font-semibold text-grafit-900 transition hover:bg-zlato-400 sm:inline-block"
+        class="hidden bg-zlato-500 px-4 py-2 text-sm font-display font-bold tracking-[0.12em] text-grafit-900 uppercase transition hover:bg-zlato-400 sm:inline-block"
       >
         {telefonPrikaz}
       </a>
@@ -163,7 +163,7 @@ const shema = {
 
   <main>
     <!-- Uvod -->
-    <section class="relative overflow-hidden bg-grafit-800">
+    <section class="tekstura relative overflow-hidden bg-grafit-800">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(201,162,74,0.18),transparent_60%)]"
         aria-hidden="true"
@@ -172,11 +172,11 @@ const shema = {
 
       <div class="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
         <div>
-          <p class="mb-4 inline-flex items-center rounded-full border border-zlato-500/40 px-3 py-1 text-xs font-semibold tracking-wide text-zlato-400 uppercase">
+          <p class="mb-5 inline-flex items-center gap-2 border-l-4 border-zlato-500 bg-white/5 px-4 py-2 font-display text-sm font-semibold tracking-[0.18em] text-zlato-400 uppercase">
             Več kot 10 let izkušenj na terenu
           </p>
 
-          <h1 class="text-4xl leading-tight font-bold text-white sm:text-5xl">
+          <h1 class="font-display text-5xl leading-[0.95] font-bold tracking-tight text-white uppercase sm:text-7xl">
             Fasade in toplotna izolacija
             <span class="block text-zlato-500">po vsej Sloveniji</span>
           </h1>
@@ -191,13 +191,13 @@ const shema = {
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={telefonHref}
-              class="hidden items-center justify-center rounded-md bg-zlato-500 px-6 py-3.5 sm:inline-flex text-base font-semibold text-grafit-900 transition hover:bg-zlato-400"
+              class="hidden items-center justify-center bg-zlato-500 px-6 py-3.5 sm:inline-flex text-base font-display font-bold tracking-[0.12em] text-grafit-900 uppercase transition hover:bg-zlato-400"
             >
               Pokličite {telefonPrikaz}
             </a>
             <a
               href="#kontakt"
-              class="inline-flex items-center justify-center rounded-md border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:border-zlato-500 hover:text-zlato-400"
+              class="inline-flex items-center justify-center border border-white/25 px-6 py-3.5 font-display text-base font-bold tracking-[0.12em] text-white uppercase transition hover:border-zlato-500 hover:bg-white/5 hover:text-zlato-400"
             >
               Brezplačen ogled objekta
             </a>
@@ -215,7 +215,7 @@ const shema = {
             alt="Logotip 3A FASADERSTVO - kakovost v vsakem sloju"
             widths={[560, 1020]}
             sizes="520px"
-            class="w-full rounded-xl shadow-2xl ring-1 ring-white/10"
+            class="w-full border-4 border-zlato-500/50"
             loading="eager"
           />
         </div>
@@ -226,19 +226,21 @@ const shema = {
     <section class="border-b border-grafit-100 bg-grafit-50">
       <div class="mx-auto grid max-w-6xl grid-cols-2 gap-px px-4 py-8 text-center sm:grid-cols-4">
         <div class="px-2">
-          <p class="text-2xl font-bold text-grafit-800">10+</p>
+          <p class="font-display text-3xl font-bold tracking-tight text-grafit-800 uppercase">10+</p>
           <p class="mt-1 text-sm text-grafit-700">let izkušenj</p>
         </div>
         <div class="px-2">
-          <p class="text-2xl font-bold text-grafit-800">Vsa</p>
-          <p class="mt-1 text-sm text-grafit-700">Slovenija</p>
+          <p class="font-display text-3xl font-bold tracking-tight text-grafit-800 uppercase">
+            Slovenija
+          </p>
+          <p class="mt-1 text-sm text-grafit-700">celotno območje</p>
         </div>
         <div class="px-2">
-          <p class="text-2xl font-bold text-grafit-800">Dogovorjeni</p>
+          <p class="font-display text-3xl font-bold tracking-tight text-grafit-800 uppercase">Dogovorjeni</p>
           <p class="mt-1 text-sm text-grafit-700">roki</p>
         </div>
         <div class="px-2">
-          <p class="text-2xl font-bold text-grafit-800">Čisto</p>
+          <p class="font-display text-3xl font-bold tracking-tight text-grafit-800 uppercase">Čisto</p>
           <p class="mt-1 text-sm text-grafit-700">gradbišče</p>
         </div>
       </div>
@@ -246,7 +248,7 @@ const shema = {
 
     <!-- Storitve -->
     <section id="storitve" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+      <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">
         Naše storitve
       </h2>
       <p class="mt-3 max-w-2xl text-grafit-700">
@@ -257,9 +259,9 @@ const shema = {
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
           storitve.map((s) => (
-            <article class="group rounded-lg border border-grafit-100 bg-white p-6 transition hover:border-zlato-500 hover:shadow-lg">
-              <div class="mb-4 h-1 w-10 rounded bg-zlato-500 transition-all group-hover:w-16" />
-              <h3 class="text-lg font-semibold text-grafit-800">{s.naslov}</h3>
+            <article class="group border border-grafit-100 bg-white p-6 transition hover:border-zlato-500 hover:border-zlato-500">
+              <div class="mb-4 h-1 w-10 bg-zlato-500 transition-all group-hover:w-16" />
+              <h3 class="font-display text-xl font-bold tracking-wide text-grafit-800 uppercase">{s.naslov}</h3>
               <p class="mt-2 text-sm leading-relaxed text-grafit-700">{s.opis}</p>
             </article>
           ))
@@ -270,7 +272,7 @@ const shema = {
     <!-- Potek dela -->
     <section id="potek" class="bg-grafit-50 py-16 sm:py-20">
       <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Kako poteka sodelovanje</h2>
+        <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">Kako poteka sodelovanje</h2>
         <p class="mt-3 max-w-2xl text-grafit-700">
           Štirje koraki od prvega klica do končane fasade.
         </p>
@@ -278,7 +280,7 @@ const shema = {
         <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {
             koraki.map((k, i) => (
-              <li class="relative rounded-lg border border-grafit-100 bg-white p-6">
+              <li class="relative border border-grafit-100 bg-white p-6">
                 <span class="text-4xl font-bold text-zlato-500">{i + 1}</span>
                 <h3 class="mt-2 text-lg font-semibold text-grafit-800">{k.naslov}</h3>
                 <p class="mt-2 text-sm leading-relaxed text-grafit-700">{k.opis}</p>
@@ -290,7 +292,7 @@ const shema = {
         <div class="mt-10">
           <a
             href="#kontakt"
-            class="inline-flex items-center justify-center rounded-md bg-zlato-500 px-6 py-3.5 font-semibold text-grafit-900 transition hover:bg-zlato-400"
+            class="inline-flex items-center justify-center bg-zlato-500 px-6 py-3.5 font-display font-bold tracking-[0.12em] text-grafit-900 uppercase transition hover:bg-zlato-400"
           >
             Pošljite povpraševanje
           </a>
@@ -299,10 +301,10 @@ const shema = {
     </section>
 
     <!-- O nas -->
-    <section id="o-nas" class="bg-grafit-800 py-16 sm:py-20">
+    <section id="o-nas" class="tekstura bg-grafit-800 py-16 sm:py-20">
       <div class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
         <div>
-          <h2 class="text-3xl font-bold text-white sm:text-4xl">Zakaj ime 3A?</h2>
+          <h2 class="crta font-display text-4xl font-bold tracking-tight text-white uppercase sm:text-5xl">Zakaj ime 3A?</h2>
           <p class="mt-5 text-lg text-grafit-100">
             Tri črke A v imenu našega podjetja predstavljajo začetnice naših treh sinov.
             Za nas to ni le ime, ampak osebna zaveza.
@@ -319,9 +321,9 @@ const shema = {
           </p>
         </div>
 
-        <div class="rounded-xl border border-white/10 bg-grafit-900 p-8">
+        <div class="border border-white/10 bg-grafit-900 p-8">
           <div
-            class="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-white/15 text-center text-sm text-grafit-100/50"
+            class="flex aspect-[4/3] items-center justify-center border-2 border-dashed border-white/15 text-center text-sm text-grafit-100/50"
           >
             Mesto za fotografijo ekipe
           </div>
@@ -334,7 +336,7 @@ const shema = {
 
     <!-- Zakaj mi -->
     <section id="zakaj-mi" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+      <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">
         Zakaj izbrati 3A fasaderstvo?
       </h2>
 
@@ -342,11 +344,11 @@ const shema = {
         {
           razlogi.map((r, i) => (
             <div class="flex gap-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-zlato-500 font-bold text-grafit-900">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center bg-zlato-500 font-display text-2xl font-bold text-grafit-900">
                 {i + 1}
               </span>
               <div>
-                <h3 class="text-lg font-semibold text-grafit-800">{r.naslov}</h3>
+                <h3 class="font-display text-xl font-bold tracking-wide text-grafit-800 uppercase">{r.naslov}</h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-grafit-700">{r.opis}</p>
               </div>
             </div>
@@ -358,7 +360,7 @@ const shema = {
     <!-- Projekti (TODO: prave fotografije) -->
     <section class="bg-grafit-50 py-16 sm:py-20">
       <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Naši projekti</h2>
+        <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">Naši projekti</h2>
         <p class="mt-3 max-w-2xl text-grafit-700">
           Pogled na nekaj objektov, ki smo jih izvedli.
         </p>
@@ -366,7 +368,7 @@ const shema = {
         <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {
             [1, 2, 3].map(() => (
-              <div class="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-grafit-100 bg-white text-center text-sm text-grafit-700/60">
+              <div class="flex aspect-[4/3] items-center justify-center border-2 border-dashed border-grafit-100 bg-white text-center text-sm text-grafit-700/60">
                 Mesto za fotografijo projekta
               </div>
             ))
@@ -377,7 +379,7 @@ const shema = {
 
     <!-- Pogosta vprasanja -->
     <section id="nasveti" class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">Pogosta vprašanja</h2>
+      <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">Pogosta vprašanja</h2>
 
       <div class="mt-10 max-w-3xl divide-y divide-grafit-100 border-y border-grafit-100">
         {
@@ -400,7 +402,7 @@ const shema = {
     <section id="kontakt" class="bg-grafit-50 py-16 sm:py-20">
       <div class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2">
         <div>
-          <h2 class="text-3xl font-bold text-grafit-800 sm:text-4xl">
+          <h2 class="crta font-display text-4xl font-bold tracking-tight text-grafit-800 uppercase sm:text-5xl">
             Brezplačen ogled in ponudba
           </h2>
           <p class="mt-4 text-grafit-700">
@@ -451,7 +453,7 @@ const shema = {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          class="rounded-xl border border-grafit-100 bg-white p-6 sm:p-8"
+          class="border border-grafit-100 bg-white p-6 sm:p-8"
         >
           <input type="hidden" name="form-name" value="povprasevanje" />
           <p class="hidden">
@@ -468,7 +470,7 @@ const shema = {
                 id="ime"
                 name="ime"
                 required
-                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                class="mt-1.5 w-full border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
               />
             </div>
 
@@ -482,7 +484,7 @@ const shema = {
                   id="telefon"
                   name="telefon"
                   required
-                  class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                  class="mt-1.5 w-full border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
                 />
               </div>
               <div>
@@ -493,7 +495,7 @@ const shema = {
                   type="email"
                   id="eposta"
                   name="eposta"
-                  class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                  class="mt-1.5 w-full border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
                 />
               </div>
             </div>
@@ -506,7 +508,7 @@ const shema = {
                 type="text"
                 id="kraj"
                 name="kraj"
-                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                class="mt-1.5 w-full border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
               />
             </div>
 
@@ -518,14 +520,14 @@ const shema = {
                 id="sporocilo"
                 name="sporocilo"
                 rows="4"
-                class="mt-1.5 w-full rounded-md border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
+                class="mt-1.5 w-full border border-grafit-100 bg-white px-3 py-2.5 text-grafit-800 outline-none focus:border-zlato-500"
               ></textarea>
             </div>
           </div>
 
           <button
             type="submit"
-            class="mt-6 w-full rounded-md bg-zlato-500 px-6 py-3.5 font-semibold text-grafit-900 transition hover:bg-zlato-400"
+            class="mt-6 w-full bg-zlato-500 px-6 py-3.5 font-display font-bold tracking-[0.12em] text-grafit-900 uppercase transition hover:bg-zlato-400"
           >
             Pošljite povpraševanje
           </button>
@@ -535,7 +537,7 @@ const shema = {
   </main>
 
   <!-- Noga -->
-  <footer class="bg-grafit-900 py-10 text-grafit-100/70">
+  <footer class="tekstura bg-grafit-900 py-12 text-grafit-100/70">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
@@ -563,7 +565,7 @@ const shema = {
   <div class="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-grafit-800 p-3 sm:hidden">
     <a
       href={telefonHref}
-      class="flex w-full items-center justify-center gap-2 rounded-md bg-zlato-500 px-5 py-3.5 font-semibold text-grafit-900"
+      class="flex w-full items-center justify-center gap-2 bg-zlato-500 px-5 py-4 font-display text-lg font-bold tracking-[0.12em] text-grafit-900 uppercase"
     >
       Pokličite {telefonPrikaz}
     </a>
