@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* Farben aus dem Logo */
+  --color-grafit-900: #212429;
+  --color-grafit-800: #2b2e33;
+  --color-grafit-700: #3a3e45;
+  --color-grafit-100: #eceef0;
+  --color-grafit-50: #f6f7f8;
+
+  --color-zlato-600: #ad8734;
+  --color-zlato-500: #c9a24a;
+  --color-zlato-400: #dcbb6e;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Platz fuer die feste Anruf-Leiste auf dem Handy */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,16 @@
+# Abhängigkeiten
+node_modules/
+
+# Build-Ausgabe
+dist/
+.astro/
+
+# Umgebung
+.env
+.env.production
+
+# Netlify
+.netlify/
+
+# System
+.DS_Store

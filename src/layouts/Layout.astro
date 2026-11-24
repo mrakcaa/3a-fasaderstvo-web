@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  naslov: string;
+  opis: string;
+}
+
+const { naslov, opis } = Astro.props;
+const kanonicni = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{naslov}</title>
+    <meta name="description" content={opis} />
+    <link rel="canonical" href={kanonicni} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sl_SI" />
+    <meta property="og:title" content={naslov} />
+    <meta property="og:description" content={opis} />
+    <meta property="og:url" content={kanonicni} />
+
+    <meta name="theme-color" content="#2b2e33" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body class="bg-white font-sans text-grafit-800">
+    <slot />
+  </body>
+</html>
