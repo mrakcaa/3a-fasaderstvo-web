@@ -18,7 +18,7 @@ priprava ponudbe“). Zielgruppe: Hausbesitzer und Bauherren in
 - Slowenische Formate: Telefon +386 …, Adressformat, Datum TT. MM. JJJJ.
 - Domain: .si
 - Mit mir (dem Entwickler) kommunizierst du auf Deutsch.
-- Zweite Sprache: [Deutsch unter /de/ mit lang="de" | keine]
+- Zweite Sprache: keine (Stand 24.11.2026, nur Slowenisch)
 
 ## Firmendaten
 - Name: 3A FASADERSTVO d. o. o.
